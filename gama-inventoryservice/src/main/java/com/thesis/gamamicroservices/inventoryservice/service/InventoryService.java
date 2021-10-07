@@ -7,10 +7,6 @@ import com.thesis.gamamicroservices.inventoryservice.model.Warehouse;
 import com.thesis.gamamicroservices.inventoryservice.repository.InventoryRepository;
 import com.thesis.gamamicroservices.inventoryservice.repository.WarehouseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ReflectionUtils;
 import org.springframework.web.client.HttpStatusCodeException;
@@ -24,7 +20,7 @@ import java.util.*;
 @Service
 public class InventoryService {
 
-    private static final String PRODUCT_CHECK_URL = "http://localhost:8080/products/exists/";
+    private static final String PRODUCT_CHECK_URL = "http://product-service:8080/products/exists/";
 
     private final InventoryRepository inventoryRepository;
     private final WarehouseRepository warehouseRepository;

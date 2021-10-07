@@ -27,7 +27,7 @@ import java.util.stream.Stream;
 @Service
 public class PromotionService {
 
-    private static final String PRODUCT_SERVICE_URL = "http://localhost:8080/promotionprice";
+    private static final String PRODUCT_SERVICE_URL = "http://product-service:8080/promotionprice";
 
     private final PromotionRepository promotionRepository;
     private final RestTemplate restTemplate;

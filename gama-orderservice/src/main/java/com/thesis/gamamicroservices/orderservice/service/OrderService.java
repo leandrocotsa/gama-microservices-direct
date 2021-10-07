@@ -1,7 +1,6 @@
 package com.thesis.gamamicroservices.orderservice.service;
 
 import com.thesis.gamamicroservices.orderservice.dto.*;
-import com.thesis.gamamicroservices.orderservice.dto.messages.consumed.StockCheckMessage;
 import com.thesis.gamamicroservices.orderservice.model.Order;
 import com.thesis.gamamicroservices.orderservice.model.OrderItem;
 import com.thesis.gamamicroservices.orderservice.model.OrderStatus;
@@ -22,8 +21,8 @@ import java.util.*;
 @Service
 public class OrderService {
 
-    private static final String PRODUCT_SERVICE_URL = "http://localhost:8080/products/list";
-    private static final String INVENTORY_CHECK_URL = "http://localhost:8081/inventories/check";
+    private static final String PRODUCT_SERVICE_URL = "http://product-service:8080/products/list";
+    private static final String INVENTORY_CHECK_URL = "http://inventory-service:8080/inventories/check";
 
     private final OrderRepository orderRepository;
     private final ShippingService shippingService;
@@ -141,7 +140,7 @@ public class OrderService {
     }
 
 
-
+/**
 
     public void processStock(StockCheckMessage stockCheckMessage) {
         Order o;
@@ -162,6 +161,7 @@ public class OrderService {
         }
 
     }
+ **/
 
 
     public void paymentConfirmed(int orderId) throws NoDataFoundException {

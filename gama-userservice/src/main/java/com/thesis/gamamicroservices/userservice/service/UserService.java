@@ -26,7 +26,7 @@ import java.util.Optional;
 @Service
 public class UserService {
 
-    private static final String PRODUCT_DELETE_REVIEW_URL = "http://localhost:8085/reviews/products/";
+    private static final String PRODUCT_DELETE_REVIEW_URL = "http://review-service:8080/reviews/products/";
 
     private final UserRepository userRepository;
     private final AddressRepository addressRepository;

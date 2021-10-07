@@ -23,7 +23,7 @@ import java.util.Optional;
 @Service
 public class PaypalService {
 
-    private static final String ORDER_SERVICE_URL = "http://localhost:8082/orders/total/";
+    private static final String ORDER_SERVICE_URL = "http://order-service:8080/orders/total/";
 
     private final APIContext apiContext;
     private final PaymentService paymentService;

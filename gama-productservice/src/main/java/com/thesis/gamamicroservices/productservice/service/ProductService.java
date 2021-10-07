@@ -27,10 +27,10 @@ public class ProductService {
     private final RestTemplate restTemplate;
 
     private static final String PRODUCT_NOT_FOUND = "There is no product with id: ";
-    private static final String PRODUCT_DELETE_INVENTORY_URL = "http://localhost:8081/inventories/products/";
-    private static final String PRODUCT_DELETE_REVIEW_URL = "http://localhost:8085/reviews/products/";
-    private static final String GET_REVIEWS_URL = "http://localhost:8085/reviews/products/";
-    private static final String GET_INVENTORIES_URL = "http://localhost:8081/inventories/products/";
+    private static final String PRODUCT_DELETE_INVENTORY_URL = "http://inventory-service:8080/inventories/products/";
+    private static final String PRODUCT_DELETE_REVIEW_URL = "http://review-service:8080/reviews/products/";
+    private static final String GET_REVIEWS_URL = "http://review-service:8080/reviews/products/";
+    private static final String GET_INVENTORIES_URL = "http://inventory-service:8080/inventories/products/";
 
    @Autowired
     public ProductService(ProductRepository productRepository, BrandService brandService, CategoryService categoryService, RestTemplate restTemplate) {

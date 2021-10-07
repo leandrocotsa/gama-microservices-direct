@@ -30,7 +30,7 @@ public class StripeService {
     @Value("${stripe.webhook.secret}")
     private String endpointSecret;
 
-    private static final String ORDER_SERVICE_URL = "http://localhost:8082/orders/total/";
+    private static final String ORDER_SERVICE_URL = "http://order-service:8080/orders/total/";
 
     @Autowired
     PaymentService paymentService;

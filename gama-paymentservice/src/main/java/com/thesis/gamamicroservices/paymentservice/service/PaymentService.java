@@ -19,7 +19,7 @@ public class PaymentService {
     private final PaymentRepository paymentRepository;
     private final RestTemplate restTemplate;
 
-    private static final String ORDER_SERVICE_CONFIRM_URL = "http://localhost:8082/orders/paymentconfirmed/";
+    private static final String ORDER_SERVICE_CONFIRM_URL = "http://order-service:8080/orders/paymentconfirmed/";
 
    @Autowired
     public PaymentService(PaymentRepository paymentRepository, RestTemplate restTemplate) {
