@@ -1,0 +1,122 @@
+version: "3.3"
+services:
+
+    api-gateway:
+      image: leandrocosta1614/gama-apigateway:latest
+      ports:
+          - 8080:8080
+      deploy:
+        replicas: 1
+        update_config:
+          parallelism: 2
+          delay: 10s
+        restart_policy:
+          condition: on-failure
+      networks:
+          - docker-network
+
+    product-service:
+      image: leandrocosta1614/gama-product-service-direct:latest
+      deploy:
+        replicas: 1
+        update_config:
+          parallelism: 2
+          delay: 10s
+        restart_policy:
+          condition: on-failure
+      networks:
+          - docker-network
+
+    order-service:
+      image: leandrocosta1614/gama-order-service-direct:latest
+      deploy:
+        replicas: 1
+        update_config:
+          parallelism: 2
+          delay: 10s
+        restart_policy:
+          condition: on-failure
+      networks:
+          - docker-network
+
+    inventory-service:
+      image: leandrocosta1614/gama-inventory-service-direct:latest
+      deploy:
+        replicas: 1
+        update_config:
+          parallelism: 2
+          delay: 10s
+        restart_policy:
+          condition: on-failure
+      networks:
+          - docker-network
+
+    review-service:
+      image: leandrocosta1614/gama-review-service-direct:latest
+      deploy:
+        replicas: 1
+        update_config:
+          parallelism: 2
+          delay: 10s
+        restart_policy:
+          condition: on-failure
+      networks:
+          - docker-network
+
+    shoppingcart-service:
+      image: leandrocosta1614/gama-shoppingcart-service-direct:latest
+      deploy:
+        replicas: 1
+        update_config:
+          parallelism: 2
+          delay: 10s
+        restart_policy:
+          condition: on-failure
+      networks:
+          - docker-network
+
+    user-service:
+      image: leandrocosta1614/gama-user-service-direct:latest
+      deploy:
+        replicas: 1
+        update_config:
+          parallelism: 2
+          delay: 10s
+        restart_policy:
+          condition: on-failure
+      networks:
+          - docker-network
+
+    promotion-service:
+      image: leandrocosta1614/gama-promotion-service-direct:latest
+      deploy:
+        replicas: 1
+        update_config:
+          parallelism: 2
+          delay: 10s
+        restart_policy:
+          condition: on-failure
+      networks:
+          - docker-network
+
+    payment-service:
+      image: leandrocosta1614/gama-payment-service-direct:latest
+      deploy:
+        replicas: 1
+        update_config:
+          parallelism: 2
+          delay: 10s
+        restart_policy:
+          condition: on-failure
+      networks:
+          - docker-network
+
+
+    
+
+networks:
+  docker-network:
+    driver: overlay
+    attachable: true
+
+  
